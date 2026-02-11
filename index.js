@@ -33,12 +33,13 @@ function makeMovieList(movies) {
   <div class="movie-info">
     <div class="movie-title-line">
       <div class="line-item"><b>${movie.Title}</b></div>
-      <div class="line-item"><i class="fa-solid fa-circle-plus" name="${movie.Title}"></i> Watchlist</div>
+      
     </div>
     <div class="movie-title-line">
       <div class="line-item">${movie.Year}</div>
-      
+      <div class="line-item"><i class="fa-solid fa-circle-plus" name="${movie.Title}"></i> Watchlist</div>
     </div>
+    
   </div>
 </div>`;
   }

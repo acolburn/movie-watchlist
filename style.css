@@ -2,6 +2,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  height: 100vh; /* Ensure body takes the full height of the viewport */
 }
 
 .header {
@@ -62,6 +63,11 @@ main {
 .movie-list {
   display: flex;
   flex-direction: column;
+  max-height: 74vh;
+  overflow-y: auto; /* Adds a scrollbar if content exceeds max height */
+  position: fixed; /* or 'fixed' */
+  top: 25%; /* Sets the top position to 25% of the viewport height */
+  margin: 30px;
 }
 
 .movie {
