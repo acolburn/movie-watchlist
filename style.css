@@ -53,8 +53,10 @@ main {
   margin: 1rem;
 }
 #no-data-img {
-  min-width: 250px;
-  max-width: 100%;
+  min-width: 200px;
+  max-width: 400px;
+  display: block;
+  margin: 20% auto;
 }
 
 .movie-list {
