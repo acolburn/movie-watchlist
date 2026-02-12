@@ -72,6 +72,7 @@ a {
 .movie-info {
   display: flex;
   flex-direction: column;
+  padding: 10px; /* Add padding to separate text from edges */
 }
 
 .movie-title {
@@ -84,6 +85,8 @@ a {
   justify-content: start;
   margin: 0 1rem;
   line-height: 1.5;
+  overflow-wrap: break-word; /* Allows breaking long words */
+  flex-wrap: wrap; /* Ensures content wraps into next line if needed */
 }
 
 i {
