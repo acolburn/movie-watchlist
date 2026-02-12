@@ -51,8 +51,12 @@ function movieListClick(event) {
   if (event.target.classList.contains("fa-circle-plus")) {
     // access the icon's name property, which is a movie title
     const movieTitle = event.target.getAttribute("name");
+    // add the movie title to the watchList
     watchList.push(movieTitle);
+    // store watchList in local storage, as JSON
+    localStorage.setItem("watchList", JSON.stringify(watchList));
+    // Update the icon and text to reflect the addition to the watchlist
+    event.target.classList.replace("fa-circle-plus", "fa-check"); // Change icon to checkmark
+    event.target.style.color = "green"; // Change the icon color to green
   }
-  // store watchList in local storage, as JSON
-  localStorage.setItem("watchList", JSON.stringify(watchList));
 }
