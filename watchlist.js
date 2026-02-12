@@ -52,9 +52,15 @@ function watchListClick(event) {
     const movieTitle = event.target.getAttribute("name");
     // remove movie from watch list
     movies = movies.filter((item) => item !== movieTitle);
+    // store revised watchList in local storage, as JSON
+    localStorage.setItem("watchList", JSON.stringify(movies));
+    // Remove the corresponding movie element from the DOM
+    const movieElement = event.target.closest(".movie"); // Find the closest movie container
+    if (movieElement) {
+      movieElement.remove(); // Remove it from the DOM
+    }
   }
-  // store revised watchList in local storage, as JSON
-  localStorage.setItem("watchList", JSON.stringify(movies));
+
   // refresh screen
-  makeMovieList(movies);
+  // makeMovieList(movies);
 }
