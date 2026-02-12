@@ -61,8 +61,11 @@ main {
 }
 
 .movie-list {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
   max-height: 74vh;
   overflow-y: auto; /* Adds a scrollbar if content exceeds max height */
   position: fixed; /* or 'fixed' */
