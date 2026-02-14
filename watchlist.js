@@ -19,12 +19,15 @@ function makeMovieList(movies) {
   for (let _movie of movies) {
     // search database for movie, by title
     fetch(`https://www.omdbapi.com/?t=${_movie}&apikey=12def47b`)
-      .then((response) => response.json())
+      .then((response) => {
+        return response.json();
+      })
       .then(function (movie) {
         movieList.innerHTML += `
         <div class="movie">
             <div class="movie-image">
-                <img src=${movie.Poster} width="100px" />
+                <img src="${movie.Poster}" width="100px" onerror="this.onerror=null;this.src='no-image-icon.jpg';" />
+
             </div>
             <div class="movie-info">
                 <div class="movie-title-line">
