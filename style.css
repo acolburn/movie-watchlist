@@ -61,7 +61,7 @@ a {
   display: flex;
   flex-direction: column;
   overflow-y: auto; /* Adds a scrollbar if content exceeds max height */
-  margin: 30px;
+  margin: 10px;
 }
 
 .movie {
@@ -72,7 +72,6 @@ a {
 .movie-info {
   display: flex;
   flex-direction: column;
-  padding: 10px; /* Add padding to separate text from edges */
 }
 
 .movie-title {
@@ -83,7 +82,7 @@ a {
 .movie-title-line {
   display: flex;
   justify-content: start;
-  margin: 0 1rem;
+  margin: 0 10px;
   line-height: 1.5;
   overflow-wrap: break-word; /* Allows breaking long words */
   flex-wrap: wrap; /* Ensures content wraps into next line if needed */
@@ -95,5 +94,5 @@ i {
 }
 
 .line-item {
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
